@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yesweareopen.biz</title>
+    {css-js}
+</head>
+
+<body>
+    <h1><a href="{site_url}">YesWeAreOpen.biz</a></h1>
+    <h2>A temporary directory of eastern panhandle businesses that are open to serve the community.</h2>
+
+    {exp:channel:entries channel="business_listing" disable="member_data|pagination"}
+    <h3>{title}</h3>
+    <p>{business_description}</p>
+
+    {if open}
+    <ul class="details"><strong>Hours</strong>{open}
+        <li>{open:day_open} {open:hours_open}</li>
+        {/open}
+    </ul>
+    {/if}
+
+    <ul class="details"><strong>Contact Info</strong>
+        {if contact_person}<li>{contact_person}</li>{/if}
+        {if contact_email}<li><a href="mailto:{contact_email}">{contact_email}</a></li>{/if}
+        {if contact_phone}<li><a href="tele:{contact_phone}">{contact_phone}</a></li>{/if}
+        {if web_address}<li><a href="{web_address}">{web_address}</a></li>{/if}
+    </ul>
+
+    <ul class="details"><strong>Address</strong>
+        <li>{contact_address}{contact_address:street}</li>
+        <li>{contact_address:city}, {contact_address:state} {contact_address:zip}{/contact_address}</li>
+    </ul>
+    {/exp:channel:entries}
+
+     <p><a class="call-to-action" href="{site_url}business/add-your-business"> Add your business</a></p>
+
+   {footer}
+
+</body>
+</html>

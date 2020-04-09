@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Your Business - yesweareopen.biz</title>
+    {css-js}
+</head>
+
+<body>
+    <h1><a href="{site_url}">YesWeAreOpen.biz</a></h1>
+    <h2>A temporary directory of eastern panhandle businesses that are open to serve the community.</h2>
+
+    <h3>Add Your Business</h3>
+    <p>Please add as much information as possible to adequately inform potential customers about the services that you have to offer.</p>
+    {exp:freeform_next:render
+                form="add_business"
+                label_class="form-label"
+                input_class="form-control"
+                instructions_below_field="yes"
+                submit_class="btn btn-success"
+                override_values:location="{segment_3}"
+            }
+                {if form:no_results}Sorry, no form was found.{/if}
+            {/exp:freeform_next:render}
+
+   {footer}
+
+</body>
+</html>

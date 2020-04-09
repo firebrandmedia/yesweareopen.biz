@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yesweareopen.biz</title>
+    {css-js}
+</head>
+
+<body>
+    <h1>YesWeAreOpen.biz</h1>
+    <h2>A temporary directory of eastern panhandle businesses that are open to serve the community.</h2>
+
+    <p><a class="call-to-action" href="{site_url}business/add-your-business"> Add your business</a></p>
+
+    {exp:channel:category_archive channel="business_listing" style="linear"}
+        {categories}
+        <h3>{category_name}</h3>
+        <ul>
+            {exp:channel:entries channel="business_listing" category="{category_id}" disable="member_data|pagination" orderby="title" sort="asc"}
+            <li><a href="{title_permalink='business/listing'}" title="About {title}">{title}</a> <em>{contact_address}{contact_address:city}{/contact_address}</em></li>{/exp:channel:entries}
+        </ul>
+        {/categories}
+    {/exp:channel:category_archive}
+
+   {footer}
+
+</body>
+</html>

@@ -1,0 +1,442 @@
+/*
+Title:		Master styles for screen media
+Author: 	gbrad@firebrand-media.com
+*/
+
+@charset "UTF-8";
+
+// Default Variables
+$color-main: RGBA(8, 62, 108, 1.00); //BLUE
+$color-alt-blue: RGBA(25, 94, 155, 1.00); //LIGHT BLUE
+$color-alt-gray: RGBA(95, 95, 95, 1.00); //GREY
+$color-alt-gray-text: #565656;
+$color-border: RGBA(86, 86, 86, 0.1);
+
+$width-tablet: 640px;
+$width-smallscreen: 900px;
+$width-midscreen: 1200px;
+$width-widescreen: 1500px;
+
+@mixin box-shadow {
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow:    0px 5px 10px 0px rgba(50, 50, 50, 0.1);
+    box-shadow:         0px -4px 35px 0px rgba(50, 50, 50, 0.1);
+}
+
+
+/* BASE STYLES
+-----------------------------*/
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+a:link {
+    color: $color-main;
+    border-bottom: 1px solid;
+    text-decoration: none;
+}
+
+a:visited {
+    color: $color-alt-blue;
+    border-bottom: 1px solid;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(139, 65, 80, 1.00);
+    border-bottom: 1px solid;
+    text-decoration: none;
+}
+
+
+h1 {
+    padding: 15px 0;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    color: $color-alt-gray;
+    font-size: 100%;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 130%;
+}
+
+ul {
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    list-style-type: none;
+    padding: 2px 0;
+}
+
+em {
+    font-style: normal;
+    color: $color-alt-gray-text;
+}
+
+.call-to-action {
+    background-color: $color-main;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+    margin: 0 auto;
+    border-bottom: none;
+    text-align: center;
+}
+
+.call-to-action:hover {
+    background-color: $color-main;
+}
+
+.call-to-action i {
+//    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+a:link.call-to-action  {
+    color: #fff;
+}
+
+a:visited.call-to-action  {
+    color: #fff;
+}
+
+.details {
+
+}
+
+footer {
+    text-align: center;
+    color: $color-alt-gray;
+    font-size: 90%;
+    margin-top: 50px;
+}
+
+@media screen and (min-width: $width-tablet) {
+
+    body {
+        max-width: 740px;
+        margin: 0 auto;
+    }
+
+
+    .call-to-action {
+        max-width: 400px;
+    }
+
+    h3 {
+        text-align: left;
+    }
+
+}
+
+/* ORIGINAL FREEFORM PRO STYLES
+-----------------------------*/
+
+.ff_composer form .unit {
+    padding: 0;
+    margin: 0;
+}
+
+.ff_composer form .page-number {
+    margin: 10px 0;
+    text-align: right;
+    font-weight: 900;
+}
+
+.ff_composer form .size1of2 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.ff_composer form .size2of2 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.ff_composer form .size1of3 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.ff_composer form .size2of3 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.ff_composer form .size3of3 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.ff_composer form .field_label {
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
+}
+
+.ff_composer form p {
+    padding:  0;
+}
+
+.ff_composer form li {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.ff_composer form .error {
+    color: red;
+    font-weight: 100;
+}
+
+.ff_composer form input {
+    border: 1px solid $color-border;
+    color: $color-main;
+    padding: 7px;
+    border-radius: 5px;
+    background: none;
+}
+
+.ff_composer form input:focus {
+    border: 1px solid $color-alt-blue;
+    color: $color-main;
+}
+
+.ff_composer input[type="text"] {
+    width: 100%;
+    font-size: 90%;
+}
+
+.ff_composer input[type="submit"] {
+    background-color: $color-main;
+    color: #fff;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.ff_composer input[type="submit"]:hover {
+    background-color: $color-alt-blue;
+    color: #fff;
+}
+
+.ff_composer textarea {
+    width: 100%;
+    border: 1px solid $color-border;
+    color: $color-main;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.ff_composer textarea:focus {
+    border: 1px solid $color-main;
+}
+
+/* FREEFORM NEXT STYLES
+-----------------------------*/
+
+form {
+    padding: 0 10px;
+}
+
+form .unit {
+    padding: 0;
+    margin: 0;
+}
+
+form .page-number {
+    margin: 10px 0;
+    text-align: right;
+    font-weight: 900;
+}
+
+form .size1of2 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+form .size2of2 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+form .size1of3 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+form .size2of3 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+form .size3of3 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+form .freeform-label {
+    padding: 5px 0;
+    margin: 0;
+    font-weight: 100;
+}
+
+form p {
+    padding:  0;
+}
+
+form li {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+form .error {
+    color: red;
+    font-weight: 100;
+}
+
+form input {
+    border: 1px solid $color-border;
+    color: $color-main;
+    padding: 7px;
+    border-radius: 5px;
+    background: none;
+}
+
+form input:focus {
+    border: 1px solid $color-main;
+    color: $color-main;
+}
+
+input[type="text"] {
+    width: 100%;
+    font-size: 90%;
+}
+
+button[type="submit"] {
+    background-color: $color-main;
+    color: #fff;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+button[type="submit"]:hover {
+    background-color: $color-alt-blue;
+    color: #fff;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid $color-border;
+    color: $color-main;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+textarea:focus {
+    border: 1px solid $color-main;
+}
+
+
+@media screen and (min-width: $width-tablet) {
+
+    /* FREEFORM PRO STYLES
+    -----------------------------*/
+
+    .ff_composer form .size1of2 {
+        padding: 0;
+        margin: 0 10px 0 0;
+        width: 48%;
+    }
+
+    .ff_composer form .size2of2 {
+        padding: 0;
+        margin: 0 5px 0 0;
+    }
+
+    .ff_composer form .size1of3 {
+        padding: 0;
+        margin: 0 10px 0 0;
+        width: auto;
+    }
+
+    .ff_composer form .size2of3 {
+        padding: 0;
+        margin: 0 10px 0 0;
+        width: auto;
+    }
+
+    .ff_composer form .size3of3 {
+        padding: 0;
+        margin: 0;
+        width: auto;
+    }
+
+    /* FREEFORM NEXT STYLES
+    -----------------------------*/
+
+    form {
+        padding: 0 10px;
+    }
+
+    form .size1of2 {
+        padding: 0;
+        margin: 0 10px 0 0;
+        width: 48%;
+    }
+
+    form .size2of2 {
+        padding: 0;
+        margin: 0 5px 0 0;
+    }
+
+    form .size1of3 {
+        padding: 0;
+        margin: 0 10px 0 0;
+        width: auto;
+    }
+
+    form .size2of3 {
+        padding: 0;
+        margin: 0 10px 0 0;
+        width: auto;
+    }
+
+    form .size3of3 {
+        padding: 0;
+        margin: 0;
+        width: auto;
+    }
+
+}
